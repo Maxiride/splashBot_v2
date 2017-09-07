@@ -5,10 +5,11 @@ require __DIR__ . '/vendor/autoload.php';
 // Load secret variables
 include 'myVars.php';
 
+$commands_paths = [
+    __DIR__ . '/Commands',
+];
+
 try {
-  $commands_paths = [
-      __DIR__ . '/Commands',
-  ];
     // Create Telegram API object
     $telegram = new Longman\TelegramBot\Telegram($bot_api_key, $bot_username);
 
@@ -19,3 +20,6 @@ try {
     // log telegram errors
     // echo $e->getMessage();
 }
+TelegramLog::initErrorLog($path . '/' . $BOT_NAME . '_error.log');
+TelegramLog::initDebugLog($path . '/' . $BOT_NAME . '_debug.log');
+TelegramLog::initUpdateLog($path . '/' . $BOT_NAME . '_update.log');
