@@ -1,17 +1,18 @@
-<?phphp
+<?php
+
 namespace Longman\TelegramBot\Commands\UserCommands;
 
 use Longman\TelegramBot\Commands\UserCommand;
 use Longman\TelegramBot\Request;
 
-class TestCommand extends UserCommand{
-  protected $name = 'splash';                      // Your command's name
-  protected $description = 'Get an high quality photo'; // Your command description
-  protected $usage = '/splash';                    // Usage of your command
-  protected $version = '1.0.0';                  // Version of your command
+class TestCommand extends UserCommand
+{
+    protected $name = 'test';                      // Your command's name
+    protected $description = 'A command for test'; // Your command description
+    protected $usage = '/test';                    // Usage of your command
+    protected $version = '1.0.0';                  // Version of your command
 
-
-public function execute()
+    public function execute()
     {
         $message = $this->getMessage();            // Get Message object
 
