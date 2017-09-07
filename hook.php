@@ -6,6 +6,9 @@ require __DIR__ . '/vendor/autoload.php';
 include 'myVars.php';
 
 try {
+  $commands_paths = [
+      __DIR__ . '/Commands',
+  ];
     // Create Telegram API object
     $telegram = new Longman\TelegramBot\Telegram($bot_api_key, $bot_username);
 
@@ -16,7 +19,3 @@ try {
     // log telegram errors
     // echo $e->getMessage();
 }
-
-$commands_paths = [
-    __DIR__ . '/Commands',
-];

@@ -1,5 +1,4 @@
 <?php
-
 namespace Longman\TelegramBot\Commands\UserCommands;
 
 use Longman\TelegramBot\Commands\UserCommand;
