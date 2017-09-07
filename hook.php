@@ -16,3 +16,7 @@ try {
     // log telegram errors
     // echo $e->getMessage();
 }
+
+$commands_paths = [
+    __DIR__ . '/Commands',
+];
