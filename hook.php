@@ -6,7 +6,7 @@ require __DIR__ . '/vendor/autoload.php';
 include 'myVars.php';
 
 $commands_paths = [
-    __DIR__ . '/Commands',
+    __DIR__ . '/Commands/',
 ];
 
 try {
