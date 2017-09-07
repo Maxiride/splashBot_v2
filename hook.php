@@ -12,7 +12,9 @@ $commands_paths = [
 try {
     // Create Telegram API object
     $telegram = new Longman\TelegramBot\Telegram($bot_api_key, $bot_username);
+
     $telegram->addCommandsPaths($commands_paths);
+
     // Handle telegram webhook request
     $telegram->handle();
 } catch (Longman\TelegramBot\Exception\TelegramException $e) {
@@ -20,6 +22,3 @@ try {
     // log telegram errors
     // echo $e->getMessage();
 }
-TelegramLog::initErrorLog($path . '/' . $BOT_NAME . '_error.log');
-TelegramLog::initDebugLog($path . '/' . $BOT_NAME . '_debug.log');
-TelegramLog::initUpdateLog($path . '/' . $BOT_NAME . '_update.log');
