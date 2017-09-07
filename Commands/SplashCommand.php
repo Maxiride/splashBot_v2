@@ -6,11 +6,10 @@ use Longman\TelegramBot\Commands\UserCommand;
 use Longman\TelegramBot\Request;
 use GuzzleHttp\Client;
 
-new GuzzleHttp\Client();
+$randomUrl = 'https://api.unsplash.com/photos/random?client_id=035477735402c0fde63a6cc7c2da69f6d55760b331b39e62f68a84260b460b4a';
 $giveMeMyImage = new GuzzleHttp\Client(['base_uri' => $randomUrl]);
 
 function randomImage(){
-  $randomUrl = 'https://api.unsplash.com/photos/random?client_id=035477735402c0fde63a6cc7c2da69f6d55760b331b39e62f68a84260b460b4a';
   $response = $giveMeMyImage->request('GET', '');
   $temp = $response->getBody();
   $json = json_decode($temp, true);
