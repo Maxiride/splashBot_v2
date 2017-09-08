@@ -29,10 +29,10 @@ if ($ip_dec < $lower_dec || $ip_dec > $upper_dec) {
 }
 
 
-// Secret check
-if (!isset($_GET['secret']) || $_GET['secret'] !== $secret) {
-    die("I'm safe =)");
-}
+// // Secret check
+// if (!isset($_GET['secret']) || $_GET['secret'] !== $secret) {
+//     die("I'm safe =)");
+// }
 
 
 // Define all IDs of admin users in this array (leave as empty array if not used)
