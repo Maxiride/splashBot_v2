@@ -20,13 +20,13 @@ include 'myVars.php';
 //     }
 // }
 
-// Make sure the IP is valid.
-$lower_dec = (float) sprintf("%u", ip2long($telegram_ip_lower));
-$upper_dec = (float) sprintf("%u", ip2long($telegram_ip_upper));
-$ip_dec    = (float) sprintf("%u", ip2long($ip));
-if ($ip_dec < $lower_dec || $ip_dec > $upper_dec) {
-    die("Hmm, I don't trust you...");
-}
+// // Make sure the IP is valid.
+// $lower_dec = (float) sprintf("%u", ip2long($telegram_ip_lower));
+// $upper_dec = (float) sprintf("%u", ip2long($telegram_ip_upper));
+// $ip_dec    = (float) sprintf("%u", ip2long($ip));
+// if ($ip_dec < $lower_dec || $ip_dec > $upper_dec) {
+//     die("Hmm, I don't trust you...");
+// }
 
 
 // // Secret check
