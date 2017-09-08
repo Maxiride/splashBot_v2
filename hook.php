@@ -5,20 +5,20 @@ require __DIR__ . '/vendor/autoload.php';
 // Load secret variables
 include 'myVars.php';
 
-// Check if the connection comes from the Telegram Servers
-// Set the lower and upper limit of valid Telegram IPs.
-// https://core.telegram.org/bots/webhooks#the-short-version
-$telegram_ip_lower = '149.154.167.197';
-$telegram_ip_upper = '149.154.167.233';
-
-// Get the real IP.
-$ip = $_SERVER['REMOTE_ADDR'];
-foreach (['HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR'] as $key) {
-    $addr = @$_SERVER[$key];
-    if (filter_var($addr, FILTER_VALIDATE_IP)) {
-        $ip = $addr;
-    }
-}
+// // Check if the connection comes from the Telegram Servers
+// // Set the lower and upper limit of valid Telegram IPs.
+// // https://core.telegram.org/bots/webhooks#the-short-version
+// $telegram_ip_lower = '149.154.167.197';
+// $telegram_ip_upper = '149.154.167.233';
+//
+// // Get the real IP.
+// $ip = $_SERVER['REMOTE_ADDR'];
+// foreach (['HTTP_CLIENT_IP', 'HTTP_X_FORWARDED_FOR'] as $key) {
+//     $addr = @$_SERVER[$key];
+//     if (filter_var($addr, FILTER_VALIDATE_IP)) {
+//         $ip = $addr;
+//     }
+// }
 
 // Make sure the IP is valid.
 $lower_dec = (float) sprintf("%u", ip2long($telegram_ip_lower));
