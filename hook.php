@@ -30,9 +30,9 @@ $telegram_ip_upper = '149.154.167.233';
 
 
 // Secret check
-if (!isset($_GET['secret']) || $_GET['secret'] !== $secret) {
-    die("I'm safe =)");
-}
+// if (!isset($_GET['secret']) || $_GET['secret'] !== $secret) {
+//     die("I'm safe =)");
+// }
 
 
 // Define all IDs of admin users in this array (leave as empty array if not used)
